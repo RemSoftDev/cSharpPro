@@ -1,0 +1,50 @@
+﻿$colors: ( #7fb14d, #00aff0, #d4c632, #6f2341, #c13035, #cb5934, #0e76bd, #fdb141);
+
+#header .navbar-brand .logo{
+    padding-left: 110px;
+    position: relative;
+    height: 66px;
+    line-height: 78px;
+}
+#header .navbar-brand .logo:before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 66px;
+    width: 96px;
+    content: "";
+    background: url(/Content/images/logo.png) no-repeat;
+    background-size: 300px;
+}
+$logoX: 5px;
+$logoY: 5px;
+$logoHeight: 68px;
+$logoWidth: 97px;
+.thumbnail-colorfull-wrapper {
+    text-align: center;
+    img{ max-width: 100%; }
+    .colorfull { padding: 5px; width: 100%; display: inline-block;}
+    .thumbnail { border: none; padding-top: 50%; border-radius: 0; background: none; position: relative; margin: 0;
+        img { position: absolute; top: 0; left: 0; bottom: 0; right: 0; margin: auto; max-width: 100%; max-height: 100%; }
+        &.cover-thumbnail { overflow: hidden; }
+        &.cover-thumbnail img { top: -99999px; left: -99999px; bottom: -99999px; right: -99999px; margin: auto; max-width: 150%; max-height: 150%; }
+    }
+}
+
+@for $i from 1 through 8 {
+    .thema-#{$i} {
+        
+        #header .navbar-brand .logo:before{
+            $x: -($logoX + ($logoWidth * ($i % 3)));
+            $y: -($logoY + ($logoHeight * ($i % 2)));
+            background-position:$x $y;
+        }
+        .thumbnail-colorfull-wrapper {
+            @for $j from 1 through 8 {
+                $color: (($j + $i ) % length($colors)) + 1;
+                $selector: length($colors) + "n-" + $j;
+                &:nth-child(#{ $selector }) .colorfull { background: nth($colors, $color); }
+            }
+        }
+    }
+}

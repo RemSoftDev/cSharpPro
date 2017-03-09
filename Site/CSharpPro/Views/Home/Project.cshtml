@@ -1,0 +1,108 @@
+﻿@model CSharpPro.ViewModels.PortfolioProjectViewModel
+
+@{
+    ViewBag.Title = Model.Project.Title;
+    var typeList = Model.Project.Types != null ? Model.Project.Types.Select(x=>x.Title).ToList(): new List<string>();
+    var types = string.Join(", ", typeList);
+    var skills = string.IsNullOrEmpty(Model.Project.Skills)
+        ? new List<string>()
+        : Model.Project.Skills
+            .Split(new[] { ';' }, StringSplitOptions.RemoveEmptyEntries)
+            .ToList();
+}
+
+<section id="page-breadcrumb">
+    <div class="vertical-center sun">
+            <div class="container">
+            <div class="row">
+                <div class="action">
+                    <div class="col-sm-12">
+                        <h1 class="title">@Model.Project.Title</h1>
+                        <p>@types</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/#action-->
+
+<section id="portfolio-information" class="padding-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <img src="@Model.Project.ImageUrl" class="img-responsive" alt="@Model.Project.Title">
+            </div>
+            <div class="col-sm-6">
+                <div class="project-info overflow">
+                    <h3>Project Info</h3>
+                    @Html.Raw(Model.Project.Description)
+                </div>
+                @if(skills != null && skills.Any())
+                {
+                    <div class="skills overflow">
+                        <h3>Skills:</h3>
+                        <ul class="nav navbar-nav navbar-default">
+                            @foreach(var skill in skills)
+                            {
+                                <li><a href="#"><i class="fa fa-check-square"></i>@skill</a></li>
+                            }
+                        </ul>
+                    </div>
+                }
+                @if(Model.Project.Clients != null && Model.Project.Clients.Any())
+                {
+                    <div class="client overflow">
+                        <h3>Client:</h3>
+                        <ul class="nav navbar-nav navbar-default">
+                            @foreach(var client in Model.Project.Clients){
+                                <li><a href="@client.ImageUrl" data-lightbox="example-set"><i class="fa fa-bolt"></i>@client.Name</a></li>
+                            }
+                        </ul>
+                    </div>
+                }
+                @if(!string.IsNullOrEmpty(Model.Project.Link))
+                {
+                    <div class="live-preview">
+                        <a href="http://@Model.Project.Link" target="_blank" class="btn btn-common uppercase">Live preview</a>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+     <!--/#portfolio-information-->
+@if(Model.RelatedProjects != null && Model.RelatedProjects.Any())
+{
+    <section id="related-work" class="padding-top padding-bottom">
+        <div class="container">
+            <h1 class="title text-center">Related Work</h1>
+            <div class="row">
+                @foreach(var project in Model.RelatedProjects)
+                {
+                    <div class="col-sm-3 thumbnail-colorfull-wrapper">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-single colorfull">
+                                <div class="thumbnail cover-thumbnail">
+                                    <img src="@project.ImageUrl" class="img-responsive" alt="@project.Title">
+                                </div>
+                                <div class="portfolio-view">
+                                    <ul class="nav nav-pills">
+                                        @if(!string.IsNullOrEmpty(project.Link)){
+                                            <li><a href="http://@project.Link" target="_blank"><i class="fa fa-link"></i></a></li>
+                                        }
+                                        <li><a href="@Url.Action("Project", "Home", new { id = project.Id })"><i class="fa fa-eye"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="portfolio-info ">
+                                <h2>@project.Title</h2>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+    <!--/#related-work-->
+}

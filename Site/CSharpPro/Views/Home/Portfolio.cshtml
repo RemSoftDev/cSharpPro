@@ -1,0 +1,64 @@
+﻿@model CSharpPro.ViewModels.PortfolioViewModel
+
+@{
+    ViewBag.Title = "Portfolio";
+}
+    <section id="page-breadcrumb">
+        <div class="vertical-center sun">
+             <div class="container">
+                <div class="row">
+                    <div class="action">
+                        <div class="col-sm-12">
+                            <h1 class="title">Portfolio</h1>
+                            <p>Be Creative</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </section>
+    <!--/#action-->
+
+    <section id="portfolio">
+        <div class="container">
+            <div class="row">
+                <ul class="portfolio-filter text-center">
+                    <li><a class="btn btn-default active" href="#" data-filter="*">All</a></li>
+                    @foreach(var type in Model.ProjectTypes)
+                    {
+                        <li><a class="btn btn-default" href="#" data-filter=".type-@type.Id">@type.Title</a></li>
+                    }
+                </ul>
+                <!--/#portfolio-filter-->
+                    
+                <div class="portfolio-items">
+                    @foreach(var project in Model.Projects)
+                    {
+                        var classes = project.Types.Select(x=>string.Format("type-{0}",x.Id)).ToList();
+                        var classesString = string.Join(" ", classes);
+                        <div class="col-xs-6 col-sm-4 col-md-3 portfolio-item @classesString thumbnail-colorfull-wrapper">
+                            <div class="portfolio-wrapper">
+                                <div class="portfolio-single colorfull">
+                                    <div class="cover-thumbnail thumbnail">
+                                        <img src="@project.ImageUrl" class="img-responsive" alt="">
+                                    </div>
+                                    <div class="portfolio-view">
+                                        <ul class="nav nav-pills">
+                                            @if(!string.IsNullOrEmpty(project.Link)){
+                                                <li><a href="http://@project.Link" target="_blank"><i class="fa fa-link"></i></a></li>
+                                            }
+                                            <li><a href="@Url.Action("Project", "Home", new { id = project.Id })"><i class="fa fa-eye"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="portfolio-info ">
+                                    <h2>@project.Title</h2>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/#portfolio-->

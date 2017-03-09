@@ -1,0 +1,25 @@
+﻿@model CSharpPro.ViewModels.ProjectTypeViewModel
+@{
+    Layout = "_LayoutAdmin.cshtml";
+}
+
+@using (Html.BeginForm("ProjectType", "Admin", FormMethod.Post, new { @class = "projetc-type-form", enctype="multipart/form-data" }))
+{
+    @Html.HiddenFor(x => x.Id)
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label for="@Html.IdFor(x=>x.Title)" class="bold">Title:</label>
+                @Html.TextBoxFor(x => x.Title, new { @class = "form-control", placeholder = "project type title" })
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <hr />
+            @Html.ActionLink("Cancel", "ProjectTypes", "Admin", null, new { @class = "btn btn-default pull-left" })
+            <button class="btn btn-success pull-right" type="submit">Save</button>
+        </div>
+    </div>
+}

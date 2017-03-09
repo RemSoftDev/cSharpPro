@@ -1,0 +1,166 @@
+﻿@model CSharpPro.ViewModels.HomeViewModel
+@{
+    ViewBag.Title = "cSharp Company";
+}
+<section id="home-slider">
+    <div class="container">
+        <div class="row">
+            <div class="main-slider">
+                <div class="slide-text text-center">
+                    <h1>We are liable nerds</h1>
+                    <p>C Sharp Programming Companyis always working on your ideas scrupulously and responsibly, to make the best product you want. Our team is treating your projects as our own.</p>
+                </div>
+                <img src="~/Content/Images/home/slider/hill.png" class="slider-hill" alt="slider image">
+                <img src="~/Content/Images/home/slider/house.png" class="slider-house" alt="slider image">
+                <img src="~/Content/Images/home/slider/sun.png" class="slider-sun" alt="slider image">
+                <img src="~/Content/Images/home/slider/birds1.png" class="slider-birds1" alt="slider image">
+                <img src="~/Content/Images/home/slider/birds2.png" class="slider-birds2" alt="slider image">
+            </div>
+        </div>
+    </div>
+    <div class="preloader"><i class="fa fa-sun-o fa-spin"></i></div>
+</section>
+<!--/#home-slider-->
+<section id="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="300ms">
+                <div class="single-service">
+                    <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
+                        <img src="~/Content/images/quality-assurance-testing.png" alt="quality">
+                    </div>
+                    <h2>Quality</h2>
+                    <p>Keep promises and deliver best products to the clients.</p>
+                </div>
+            </div>
+            <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
+                <div class="single-service">
+                    <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="600ms">
+                        <img src="~/Content/images/Missed-Deadlines.jpg" alt="deadlines">
+                    </div>
+                    <h2>Deadlines</h2>
+                    <p>Meet all required time frames.</p>
+                </div>
+            </div>
+            <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="900ms">
+                <div class="single-service">
+                    <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="900ms">
+                        <img src="~/Content/images/techsupport-circle.png" alt="tech support">
+                    </div>
+                    <h2>Tech Support</h2>
+                    <p>Never leave our clients after projects delivery.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/#services-->
+<section id="action" class="responsive">
+    <div class="vertical-center">
+        <div class="container">
+            <div class="row">
+                <div class="action take-tour">
+                    <div class="col-sm-7 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
+                        <h1 class="title">Why us</h1>
+                        <p>Our company is highly competent in our area and we always meet our clients expectations.</p>
+                    </div>
+                    <div class="col-sm-5 text-center wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
+                        <div class="tour-button"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/#action-->
+<section id="features">
+    <div class="container">
+        <div class="row">
+            <div class="single-features thumbnail-colorfull-wrapper">
+                <div class="col-sm-5 col-xs-10 col-xs-offset-1 col-sm-offset-0 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
+                    <div class="colorfull">
+                        <img src="~/Content/images/Security.png" class="img-responsive" alt="">
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xs-10 col-xs-offset-1 col-sm-offset-0 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
+                    <h2>Security</h2>
+                    <p>C Sharp Programming Companycan guarantee that development process will be secured from third part as we are a team and communication concerning your project won’t go anywere else.</p>
+                </div>
+            </div>
+            <div class="single-features thumbnail-colorfull-wrapper single-features-right">
+                <div class="col-sm-5 col-xs-10 col-xs-offset-1 col-sm-offset-0 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
+                    <div class="colorfull">
+                        <img src="~/Content/images/techs.png" class="img-responsive" alt="technologies">
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xs-10 col-xs-offset-1 col-sm-offset-1 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
+                    <h2>Technologies</h2>
+                    <p>C Sharp Programming Companycan use different technologies old, new and next generation ones to develop for you the best solution.</p>
+                </div>
+            </div>
+            <div class="single-features thumbnail-colorfull-wrapper">
+                <div class="col-sm-5 col-xs-10 col-xs-offset-1 col-sm-offset-0 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
+                    <div class="colorfull">
+                        <img src="~/Content/Images/comunication.jpg" class="img-responsive" alt="">
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xs-10 col-xs-offset-1 col-sm-offset-0  wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
+                    <h2>Communication</h2>
+                    <p>Our team believe that proper communication always leads to successful accomplishment of clients project as it is one of key parts for proper understanding of our clients needs.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/#features-->
+@if (Model.Clients != null && Model.Clients.Any())
+{
+    <section id="clients">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="clients text-center wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
+                        <p><img src="~/Content/images/home/clients.png" class="img-responsive" alt="happy clients"></p>
+                        <h1 class="title">Happy clients</h1>
+                        <p>Our projects are always of the highest quality as we do our best for the clients we are working with</p>
+                    </div>
+                    <div class="clients-logo wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
+                        @foreach (var client in Model.Clients)
+                        {
+                            <div class="col-xs-4 col-sm-2 thumbnail-colorfull-wrapper client">
+                                <div class="colorfull">
+                                    <div class="thumbnail">
+                                        @if (string.IsNullOrEmpty(client.Link))
+                                        {
+                                            <img src="@client.ImageUrl" alt="@client.Name">
+                                        }
+                                        else
+                                        {
+                                            <a href="http://@client.Link" target="_blank">
+                                                @if (!string.IsNullOrEmpty(client.ImageUrl))
+                                                {
+                                                    <img src="@client.ImageUrl" alt="@client.Name">
+                                                }
+                                            </a>
+                                        }
+                                    </div>
+                                </div>
+                                <h3 class="text-left client-name">
+                                    @if (string.IsNullOrEmpty(client.Link))
+                                    {
+                                        <text>@client.Name</text>
+                                    }
+                                    else
+                                    {
+                                        <a href="http://@client.Link" target="_blank">@client.Name</a>
+                                    }
+                                </h3>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+<!--/#clients-->

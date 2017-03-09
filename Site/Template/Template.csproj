@@ -1,0 +1,505 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DA91FD5A-590A-4616-A221-83144A06B5FC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Template</RootNamespace>
+    <AssemblyName>Template</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="documentation\assets\css\documenter_style.css" />
+    <Content Include="documentation\assets\css\img\info.png" />
+    <Content Include="documentation\assets\css\img\warning.png" />
+    <Content Include="documentation\assets\js\google-code-prettify\prettify.css" />
+    <Content Include="documentation\assets\js\google-code-prettify\prettify.js" />
+    <Content Include="documentation\assets\js\jquery.easing.js" />
+    <Content Include="documentation\assets\js\jquery.js" />
+    <Content Include="documentation\assets\js\jquery.scrollTo.js" />
+    <Content Include="documentation\assets\js\script.js" />
+    <Content Include="documentation\index.html" />
+    <Content Include="template\multicolor\404.html" />
+    <Content Include="template\multicolor\aboutus.html" />
+    <Content Include="template\multicolor\aboutus2.html" />
+    <Content Include="template\multicolor\audio\juicy.mp3" />
+    <Content Include="template\multicolor\blog.html" />
+    <Content Include="template\multicolor\blogdetails.html" />
+    <Content Include="template\multicolor\blogfour.html" />
+    <Content Include="template\multicolor\blogone.html" />
+    <Content Include="template\multicolor\blogthree.html" />
+    <Content Include="template\multicolor\blogtwo.html" />
+    <Content Include="template\multicolor\coming-soon.html" />
+    <Content Include="template\multicolor\contact.html" />
+    <Content Include="template\multicolor\contact2.html" />
+    <Content Include="template\multicolor\css\animate.min.css" />
+    <Content Include="template\multicolor\css\bootstrap.min.css" />
+    <Content Include="template\multicolor\css\font-awesome.min.css" />
+    <Content Include="template\multicolor\css\lightbox.css" />
+    <Content Include="template\multicolor\css\main.css" />
+    <Content Include="template\multicolor\css\prettyPhoto.css" />
+    <Content Include="template\multicolor\css\responsive.css" />
+    <Content Include="template\multicolor\fonts\fontawesome-webfont.svg" />
+    <Content Include="template\multicolor\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="template\multicolor\images\404-bg.png" />
+    <Content Include="template\multicolor\images\404.png" />
+    <Content Include="template\multicolor\images\aboutus\1.jpg" />
+    <Content Include="template\multicolor\images\aboutus\1.png" />
+    <Content Include="template\multicolor\images\aboutus\2.jpg" />
+    <Content Include="template\multicolor\images\aboutus\3.jpg" />
+    <Content Include="template\multicolor\images\aboutus\4.jpg" />
+    <Content Include="template\multicolor\images\aboutus\5.png" />
+    <Content Include="template\multicolor\images\aboutus\6.png" />
+    <Content Include="template\multicolor\images\aboutus\left.png" />
+    <Content Include="template\multicolor\images\aboutus\right.png" />
+    <Content Include="template\multicolor\images\blogdetails\1.png" />
+    <Content Include="template\multicolor\images\blogdetails\2.png" />
+    <Content Include="template\multicolor\images\blogdetails\3.png" />
+    <Content Include="template\multicolor\images\blogdetails\4.png" />
+    <Content Include="template\multicolor\images\blog\1.jpg" />
+    <Content Include="template\multicolor\images\blog\2.jpg" />
+    <Content Include="template\multicolor\images\blog\3.jpg" />
+    <Content Include="template\multicolor\images\blog\4.jpg" />
+    <Content Include="template\multicolor\images\blog\5.jpg" />
+    <Content Include="template\multicolor\images\blog\6.jpg" />
+    <Content Include="template\multicolor\images\blog\7.jpg" />
+    <Content Include="template\multicolor\images\blog\8.jpg" />
+    <Content Include="template\multicolor\images\blog\9.jpg" />
+    <Content Include="template\multicolor\images\blog\blog-arrow.png" />
+    <Content Include="template\multicolor\images\blog\left.png" />
+    <Content Include="template\multicolor\images\blog\masonary\1.jpg" />
+    <Content Include="template\multicolor\images\blog\masonary\10.jpg" />
+    <Content Include="template\multicolor\images\blog\masonary\2.jpg" />
+    <Content Include="template\multicolor\images\blog\masonary\3.jpg" />
+    <Content Include="template\multicolor\images\blog\masonary\4.jpg" />
+    <Content Include="template\multicolor\images\blog\masonary\5.jpg" />
+    <Content Include="template\multicolor\images\blog\masonary\6.jpg" />
+    <Content Include="template\multicolor\images\blog\masonary\7.jpg" />
+    <Content Include="template\multicolor\images\blog\masonary\8.jpg" />
+    <Content Include="template\multicolor\images\blog\masonary\9.jpg" />
+    <Content Include="template\multicolor\images\blog\right.png" />
+    <Content Include="template\multicolor\images\blog\timeline\1.jpg" />
+    <Content Include="template\multicolor\images\blog\timeline\2.jpg" />
+    <Content Include="template\multicolor\images\blog\timeline\3.jpg" />
+    <Content Include="template\multicolor\images\blog\timeline\4.jpg" />
+    <Content Include="template\multicolor\images\blog\timeline\5.jpg" />
+    <Content Include="template\multicolor\images\blog\timeline\6.jpg" />
+    <Content Include="template\multicolor\images\blog\timeline\7.jpg" />
+    <Content Include="template\multicolor\images\blog\timeline\8.jpg" />
+    <Content Include="template\multicolor\images\blog\timeline\9.jpg" />
+    <Content Include="template\multicolor\images\coming-soon-bg.png" />
+    <Content Include="template\multicolor\images\coming-soon1.png" />
+    <Content Include="template\multicolor\images\coming-soon2.png" />
+    <Content Include="template\multicolor\images\coming-soon3.png" />
+    <Content Include="template\multicolor\images\coming-soon4.png" />
+    <Content Include="template\multicolor\images\contact-bg.png" />
+    <Content Include="template\multicolor\images\home\activeicon.png" />
+    <Content Include="template\multicolor\images\home\client1.png" />
+    <Content Include="template\multicolor\images\home\client2.png" />
+    <Content Include="template\multicolor\images\home\client3.png" />
+    <Content Include="template\multicolor\images\home\client4.png" />
+    <Content Include="template\multicolor\images\home\client5.png" />
+    <Content Include="template\multicolor\images\home\client6.png" />
+    <Content Include="template\multicolor\images\home\clients.png" />
+    <Content Include="template\multicolor\images\home\cycle.png" />
+    <Content Include="template\multicolor\images\home\footer.png" />
+    <Content Include="template\multicolor\images\home\icon1.png" />
+    <Content Include="template\multicolor\images\home\icon2.png" />
+    <Content Include="template\multicolor\images\home\icon3.png" />
+    <Content Include="template\multicolor\images\home\image1.png" />
+    <Content Include="template\multicolor\images\home\image2.png" />
+    <Content Include="template\multicolor\images\home\image3.png" />
+    <Content Include="template\multicolor\images\home\profile1.png" />
+    <Content Include="template\multicolor\images\home\profile2.png" />
+    <Content Include="template\multicolor\images\home\slider-bg.png" />
+    <Content Include="template\multicolor\images\home\slider\birds1.png" />
+    <Content Include="template\multicolor\images\home\slider\birds2.png" />
+    <Content Include="template\multicolor\images\home\slider\hill.png" />
+    <Content Include="template\multicolor\images\home\slider\house.png" />
+    <Content Include="template\multicolor\images\home\slider\sun.png" />
+    <Content Include="template\multicolor\images\home\tour-bg.png" />
+    <Content Include="template\multicolor\images\home\tour-icon1.png" />
+    <Content Include="template\multicolor\images\home\tour-icon2.png" />
+    <Content Include="template\multicolor\images\home\under.png" />
+    <Content Include="template\multicolor\images\icon-map.png" />
+    <Content Include="template\multicolor\images\ico\apple-touch-icon-114-precomposed.png" />
+    <Content Include="template\multicolor\images\ico\apple-touch-icon-144-precomposed.png" />
+    <Content Include="template\multicolor\images\ico\apple-touch-icon-57-precomposed.png" />
+    <Content Include="template\multicolor\images\ico\apple-touch-icon-72-precomposed.png" />
+    <Content Include="template\multicolor\images\ico\favicon.ico" />
+    <Content Include="template\multicolor\images\lightbox\close.png" />
+    <Content Include="template\multicolor\images\lightbox\loading.gif" />
+    <Content Include="template\multicolor\images\lightbox\next.png" />
+    <Content Include="template\multicolor\images\lightbox\prev.png" />
+    <Content Include="template\multicolor\images\logo.png" />
+    <Content Include="template\multicolor\images\portfolio-details\1.jpg" />
+    <Content Include="template\multicolor\images\portfolio\1.jpg" />
+    <Content Include="template\multicolor\images\portfolio\10.jpg" />
+    <Content Include="template\multicolor\images\portfolio\11.jpg" />
+    <Content Include="template\multicolor\images\portfolio\12.jpg" />
+    <Content Include="template\multicolor\images\portfolio\13.jpg" />
+    <Content Include="template\multicolor\images\portfolio\14.jpg" />
+    <Content Include="template\multicolor\images\portfolio\15.jpg" />
+    <Content Include="template\multicolor\images\portfolio\16.jpg" />
+    <Content Include="template\multicolor\images\portfolio\17.jpg" />
+    <Content Include="template\multicolor\images\portfolio\18.jpg" />
+    <Content Include="template\multicolor\images\portfolio\19.jpg" />
+    <Content Include="template\multicolor\images\portfolio\2.jpg" />
+    <Content Include="template\multicolor\images\portfolio\20.jpg" />
+    <Content Include="template\multicolor\images\portfolio\21.jpg" />
+    <Content Include="template\multicolor\images\portfolio\22.jpg" />
+    <Content Include="template\multicolor\images\portfolio\23.jpg" />
+    <Content Include="template\multicolor\images\portfolio\24.jpg" />
+    <Content Include="template\multicolor\images\portfolio\3.jpg" />
+    <Content Include="template\multicolor\images\portfolio\4.jpg" />
+    <Content Include="template\multicolor\images\portfolio\5.jpg" />
+    <Content Include="template\multicolor\images\portfolio\6.jpg" />
+    <Content Include="template\multicolor\images\portfolio\7.jpg" />
+    <Content Include="template\multicolor\images\portfolio\8.jpg" />
+    <Content Include="template\multicolor\images\portfolio\9.jpg" />
+    <Content Include="template\multicolor\images\portfolio\icon.png" />
+    <Content Include="template\multicolor\images\portfolio\left.png" />
+    <Content Include="template\multicolor\images\portfolio\popular1.jpg" />
+    <Content Include="template\multicolor\images\portfolio\popular2.jpg" />
+    <Content Include="template\multicolor\images\portfolio\popular3.jpg" />
+    <Content Include="template\multicolor\images\portfolio\popular4.jpg" />
+    <Content Include="template\multicolor\images\portfolio\popular5.jpg" />
+    <Content Include="template\multicolor\images\portfolio\project1.jpg" />
+    <Content Include="template\multicolor\images\portfolio\project2.jpg" />
+    <Content Include="template\multicolor\images\portfolio\project3.jpg" />
+    <Content Include="template\multicolor\images\portfolio\right.png" />
+    <Content Include="template\multicolor\images\services\1.png" />
+    <Content Include="template\multicolor\images\services\2.png" />
+    <Content Include="template\multicolor\images\services\3.png" />
+    <Content Include="template\multicolor\images\services\4.png" />
+    <Content Include="template\multicolor\index.html" />
+    <Content Include="template\multicolor\js\audio.min.js" />
+    <Content Include="template\multicolor\js\audiojs.swf" />
+    <Content Include="template\multicolor\js\bootstrap.min.js" />
+    <Content Include="template\multicolor\js\coundown-timer.js" />
+    <Content Include="template\multicolor\js\gmaps.js" />
+    <Content Include="template\multicolor\js\holder.js" />
+    <Content Include="template\multicolor\js\html5shiv.js" />
+    <Content Include="template\multicolor\js\jquery.countTo.js" />
+    <Content Include="template\multicolor\js\jquery.fitvids.js" />
+    <Content Include="template\multicolor\js\jquery.isotope.min.js" />
+    <Content Include="template\multicolor\js\jquery.js" />
+    <Content Include="template\multicolor\js\lightbox.min.js" />
+    <Content Include="template\multicolor\js\main.js" />
+    <Content Include="template\multicolor\js\masonry.min.js" />
+    <Content Include="template\multicolor\js\player-graphics.gif" />
+    <Content Include="template\multicolor\js\respond.min.js" />
+    <Content Include="template\multicolor\js\w.gif" />
+    <Content Include="template\multicolor\js\wow.min.js" />
+    <Content Include="template\multicolor\portfolio-details.html" />
+    <Content Include="template\multicolor\portfolio.html" />
+    <Content Include="template\multicolor\portfoliofour.html" />
+    <Content Include="template\multicolor\portfolioone.html" />
+    <Content Include="template\multicolor\portfoliothree.html" />
+    <Content Include="template\multicolor\portfoliotwo.html" />
+    <Content Include="template\multicolor\pricing.html" />
+    <Content Include="template\multicolor\service.html" />
+    <Content Include="template\multicolor\shortcodes.html" />
+    <Content Include="template\singlecolor\404.html" />
+    <Content Include="template\singlecolor\aboutus.html" />
+    <Content Include="template\singlecolor\aboutus2.html" />
+    <Content Include="template\singlecolor\audio\juicy.mp3" />
+    <Content Include="template\singlecolor\blog.html" />
+    <Content Include="template\singlecolor\blogdetails.html" />
+    <Content Include="template\singlecolor\blogfour.html" />
+    <Content Include="template\singlecolor\blogone.html" />
+    <Content Include="template\singlecolor\blogthree.html" />
+    <Content Include="template\singlecolor\blogtwo.html" />
+    <Content Include="template\singlecolor\coming-soon.html" />
+    <Content Include="template\singlecolor\contact.html" />
+    <Content Include="template\singlecolor\contact2.html" />
+    <Content Include="template\singlecolor\css\animate.min.css" />
+    <Content Include="template\singlecolor\css\bootstrap.min.css" />
+    <Content Include="template\singlecolor\css\font-awesome.min.css" />
+    <Content Include="template\singlecolor\css\lightbox.css" />
+    <Content Include="template\singlecolor\css\main.css" />
+    <Content Include="template\singlecolor\css\prettyPhoto.css" />
+    <Content Include="template\singlecolor\css\responsive.css" />
+    <Content Include="template\singlecolor\fonts\fontawesome-webfont.svg" />
+    <Content Include="template\singlecolor\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="template\singlecolor\images\404.png" />
+    <Content Include="template\singlecolor\images\aboutus\1.jpg" />
+    <Content Include="template\singlecolor\images\aboutus\1.png" />
+    <Content Include="template\singlecolor\images\aboutus\2.jpg" />
+    <Content Include="template\singlecolor\images\aboutus\3.jpg" />
+    <Content Include="template\singlecolor\images\aboutus\4.jpg" />
+    <Content Include="template\singlecolor\images\aboutus\5.png" />
+    <Content Include="template\singlecolor\images\aboutus\6.png" />
+    <Content Include="template\singlecolor\images\aboutus\left.png" />
+    <Content Include="template\singlecolor\images\aboutus\right.png" />
+    <Content Include="template\singlecolor\images\blogdetails\1.png" />
+    <Content Include="template\singlecolor\images\blogdetails\2.png" />
+    <Content Include="template\singlecolor\images\blogdetails\3.png" />
+    <Content Include="template\singlecolor\images\blogdetails\4.png" />
+    <Content Include="template\singlecolor\images\blog\1.jpg" />
+    <Content Include="template\singlecolor\images\blog\2.jpg" />
+    <Content Include="template\singlecolor\images\blog\3.jpg" />
+    <Content Include="template\singlecolor\images\blog\4.jpg" />
+    <Content Include="template\singlecolor\images\blog\5.jpg" />
+    <Content Include="template\singlecolor\images\blog\6.jpg" />
+    <Content Include="template\singlecolor\images\blog\7.jpg" />
+    <Content Include="template\singlecolor\images\blog\8.jpg" />
+    <Content Include="template\singlecolor\images\blog\9.jpg" />
+    <Content Include="template\singlecolor\images\blog\blog-arrow.png" />
+    <Content Include="template\singlecolor\images\blog\left.png" />
+    <Content Include="template\singlecolor\images\blog\masonary\1.jpg" />
+    <Content Include="template\singlecolor\images\blog\masonary\10.jpg" />
+    <Content Include="template\singlecolor\images\blog\masonary\2.jpg" />
+    <Content Include="template\singlecolor\images\blog\masonary\4.jpg" />
+    <Content Include="template\singlecolor\images\blog\masonary\5.jpg" />
+    <Content Include="template\singlecolor\images\blog\masonary\6.jpg" />
+    <Content Include="template\singlecolor\images\blog\masonary\7.jpg" />
+    <Content Include="template\singlecolor\images\blog\masonary\8.jpg" />
+    <Content Include="template\singlecolor\images\blog\masonary\9.jpg" />
+    <Content Include="template\singlecolor\images\blog\right.png" />
+    <Content Include="template\singlecolor\images\blog\timeline\1.jpg" />
+    <Content Include="template\singlecolor\images\blog\timeline\2.jpg" />
+    <Content Include="template\singlecolor\images\blog\timeline\3.jpg" />
+    <Content Include="template\singlecolor\images\blog\timeline\4.jpg" />
+    <Content Include="template\singlecolor\images\blog\timeline\5.jpg" />
+    <Content Include="template\singlecolor\images\blog\timeline\6.jpg" />
+    <Content Include="template\singlecolor\images\blog\timeline\7.jpg" />
+    <Content Include="template\singlecolor\images\blog\timeline\8.jpg" />
+    <Content Include="template\singlecolor\images\blog\timeline\9.jpg" />
+    <Content Include="template\singlecolor\images\contact-bg.png" />
+    <Content Include="template\singlecolor\images\home\activeicon.png" />
+    <Content Include="template\singlecolor\images\home\client1.png" />
+    <Content Include="template\singlecolor\images\home\client2.png" />
+    <Content Include="template\singlecolor\images\home\client3.png" />
+    <Content Include="template\singlecolor\images\home\client4.png" />
+    <Content Include="template\singlecolor\images\home\client5.png" />
+    <Content Include="template\singlecolor\images\home\client6.png" />
+    <Content Include="template\singlecolor\images\home\clients.png" />
+    <Content Include="template\singlecolor\images\home\cycle.png" />
+    <Content Include="template\singlecolor\images\home\footer.png" />
+    <Content Include="template\singlecolor\images\home\icon1.png" />
+    <Content Include="template\singlecolor\images\home\icon2.png" />
+    <Content Include="template\singlecolor\images\home\icon3.png" />
+    <Content Include="template\singlecolor\images\home\image1.png" />
+    <Content Include="template\singlecolor\images\home\image2.png" />
+    <Content Include="template\singlecolor\images\home\image3.png" />
+    <Content Include="template\singlecolor\images\home\profile1.png" />
+    <Content Include="template\singlecolor\images\home\profile2.png" />
+    <Content Include="template\singlecolor\images\home\slider-bg.png" />
+    <Content Include="template\singlecolor\images\home\slider\slide1\circle1.png" />
+    <Content Include="template\singlecolor\images\home\slider\slide1\circle2.png" />
+    <Content Include="template\singlecolor\images\home\slider\slide1\cloud1.png" />
+    <Content Include="template\singlecolor\images\home\slider\slide1\cloud2.png" />
+    <Content Include="template\singlecolor\images\home\slider\slide1\cloud3.png" />
+    <Content Include="template\singlecolor\images\home\slider\slide1\cycle.png" />
+    <Content Include="template\singlecolor\images\home\slider\slide1\house.png" />
+    <Content Include="template\singlecolor\images\home\slider\slide1\sun.png" />
+    <Content Include="template\singlecolor\images\home\tour-bg.png" />
+    <Content Include="template\singlecolor\images\home\tour-icon1.png" />
+    <Content Include="template\singlecolor\images\home\tour-icon2.png" />
+    <Content Include="template\singlecolor\images\home\under.png" />
+    <Content Include="template\singlecolor\images\icon-map.png" />
+    <Content Include="template\singlecolor\images\ico\apple-touch-icon-114-precomposed.png" />
+    <Content Include="template\singlecolor\images\ico\apple-touch-icon-144-precomposed.png" />
+    <Content Include="template\singlecolor\images\ico\apple-touch-icon-57-precomposed.png" />
+    <Content Include="template\singlecolor\images\ico\apple-touch-icon-72-precomposed.png" />
+    <Content Include="template\singlecolor\images\ico\favicon.ico" />
+    <Content Include="template\singlecolor\images\lightbox\close.png" />
+    <Content Include="template\singlecolor\images\lightbox\loading.gif" />
+    <Content Include="template\singlecolor\images\lightbox\next.png" />
+    <Content Include="template\singlecolor\images\lightbox\prev.png" />
+    <Content Include="template\singlecolor\images\logo.png" />
+    <Content Include="template\singlecolor\images\portfolio-details\1.jpg" />
+    <Content Include="template\singlecolor\images\portfolio\1.jpg" />
+    <Content Include="template\singlecolor\images\portfolio\10.jpg" />
+    <Content Include="template\singlecolor\images\portfolio\11.jpg" />
+    <Content Include="template\singlecolor\images\portfolio\12.jpg" />
+    <Content Include="template\singlecolor\images\portfolio\13.jpg" />
+    <Content Include="template\singlecolor\images\portfolio\14.jpg" />
+    <Content Include="template\singlecolor\images\portfolio\15.jpg" />
+    <Content Include="template\singlecolor\images\portfolio\16.jpg" />
+    <Content Include="template\singlecolor\images\portfolio\17.jpg" />
+    <Content Include="template\singlecolor\images\portfolio\18.jpg" />
+    <Content Include="template\singlecolor\images\portfolio\19.jpg" />
+    <Content Include="template\singlecolor\images\portfolio\2.jpg" />
+    <Content Include="template\singlecolor\images\portfolio\20.jpg" />
+    <Content Include="template\singlecolor\images\portfolio\21.jpg" />
+    <Content Include="template\singlecolor\images\portfolio\22.jpg" />
+    <Content Include="template\singlecolor\images\portfolio\23.jpg" />
+    <Content Include="template\singlecolor\images\portfolio\24.jpg" />
+    <Content Include="template\singlecolor\images\portfolio\3.jpg" />
+    <Content Include="template\singlecolor\images\portfolio\4.jpg" />
+    <Content Include="template\singlecolor\images\portfolio\5.jpg" />
+    <Content Include="template\singlecolor\images\portfolio\6.jpg" />
+    <Content Include="template\singlecolor\images\portfolio\7.jpg" />
+    <Content Include="template\singlecolor\images\portfolio\8.jpg" />
+    <Content Include="template\singlecolor\images\portfolio\9.jpg" />
+    <Content Include="template\singlecolor\images\portfolio\icon.png" />
+    <Content Include="template\singlecolor\images\portfolio\left.png" />
+    <Content Include="template\singlecolor\images\portfolio\popular1.jpg" />
+    <Content Include="template\singlecolor\images\portfolio\popular2.jpg" />
+    <Content Include="template\singlecolor\images\portfolio\popular3.jpg" />
+    <Content Include="template\singlecolor\images\portfolio\popular4.jpg" />
+    <Content Include="template\singlecolor\images\portfolio\popular5.jpg" />
+    <Content Include="template\singlecolor\images\portfolio\project1.jpg" />
+    <Content Include="template\singlecolor\images\portfolio\project2.jpg" />
+    <Content Include="template\singlecolor\images\portfolio\project3.jpg" />
+    <Content Include="template\singlecolor\images\portfolio\right.png" />
+    <Content Include="template\singlecolor\images\services\1.png" />
+    <Content Include="template\singlecolor\images\services\2.png" />
+    <Content Include="template\singlecolor\images\services\3.png" />
+    <Content Include="template\singlecolor\images\services\4.png" />
+    <Content Include="template\singlecolor\index.html" />
+    <Content Include="template\singlecolor\js\audio.min.js" />
+    <Content Include="template\singlecolor\js\audiojs.swf" />
+    <Content Include="template\singlecolor\js\bootstrap.min.js" />
+    <Content Include="template\singlecolor\js\coundown-timer.js" />
+    <Content Include="template\singlecolor\js\gmaps.js" />
+    <Content Include="template\singlecolor\js\holder.js" />
+    <Content Include="template\singlecolor\js\html5shiv.js" />
+    <Content Include="template\singlecolor\js\jquery.countTo.js" />
+    <Content Include="template\singlecolor\js\jquery.fitvids.js" />
+    <Content Include="template\singlecolor\js\jquery.isotope.min.js" />
+    <Content Include="template\singlecolor\js\jquery.js" />
+    <Content Include="template\singlecolor\js\lightbox.min.js" />
+    <Content Include="template\singlecolor\js\main.js" />
+    <Content Include="template\singlecolor\js\masonry.min.js" />
+    <Content Include="template\singlecolor\js\player-graphics.gif" />
+    <Content Include="template\singlecolor\js\respond.min.js" />
+    <Content Include="template\singlecolor\js\w.gif" />
+    <Content Include="template\singlecolor\js\wow.min.js" />
+    <Content Include="template\singlecolor\portfolio-details.html" />
+    <Content Include="template\singlecolor\portfolio.html" />
+    <Content Include="template\singlecolor\portfoliofour.html" />
+    <Content Include="template\singlecolor\portfolioone.html" />
+    <Content Include="template\singlecolor\portfoliothree.html" />
+    <Content Include="template\singlecolor\portfoliotwo.html" />
+    <Content Include="template\singlecolor\pricing.html" />
+    <Content Include="template\singlecolor\service.html" />
+    <Content Include="template\singlecolor\shortcodes.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="template\multicolor\fonts\fontawesome-webfont.eot" />
+    <Content Include="template\multicolor\fonts\fontawesome-webfont.ttf" />
+    <Content Include="template\multicolor\fonts\fontawesome-webfont.woff" />
+    <Content Include="template\multicolor\fonts\fontawesome-webfont.woff2" />
+    <Content Include="template\multicolor\fonts\FontAwesome.otf" />
+    <Content Include="template\multicolor\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="template\multicolor\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="template\multicolor\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="template\multicolor\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="template\multicolor\sendemail.php" />
+    <Content Include="template\singlecolor\fonts\fontawesome-webfont.eot" />
+    <Content Include="template\singlecolor\fonts\fontawesome-webfont.ttf" />
+    <Content Include="template\singlecolor\fonts\fontawesome-webfont.woff" />
+    <Content Include="template\singlecolor\fonts\fontawesome-webfont.woff2" />
+    <Content Include="template\singlecolor\fonts\FontAwesome.otf" />
+    <Content Include="template\singlecolor\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="template\singlecolor\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="template\singlecolor\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="template\singlecolor\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="template\singlecolor\sendemail.php" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="documentation\assets\images\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62637</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:62637/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

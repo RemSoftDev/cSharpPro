@@ -1,0 +1,25 @@
+﻿@model CSharpPro.ViewModels.EmailViewModel
+@{
+    Layout = null;
+}
+@using(Ajax.BeginForm("EmailForm", "Home", null, new AjaxOptions { UpdateTargetId = "mail-form" }, new { id = "mail-form" }))
+{
+    if (Model != null && Model.ShowThankyouMessage)
+    {
+        <div class="alert alert-success">
+            Thank you for you request!
+        </div>
+    }
+    <div class="form-group">
+        @Html.TextBoxFor(x=>x.Name, new { @class="form-control",placeholder="Name" })
+    </div>
+    <div class="form-group">
+        @Html.TextBoxFor(x=>x.Email, new { @class="form-control", placeholder="Email", type="email" })
+    </div>
+    <div class="form-group">
+        @Html.TextAreaFor(x=>x.Message, new { @class="form-control", placeholder="Your text here", rows="8" })
+    </div>
+    <div class="form-group">
+        <input type="submit" name="submit" class="btn btn-submit" value="Submit">
+    </div>
+}

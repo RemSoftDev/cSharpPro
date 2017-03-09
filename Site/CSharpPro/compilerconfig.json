@@ -1,0 +1,10 @@
+﻿[
+  {
+    "outputFile": "Content/colorfull.css",
+    "inputFile": "Content/colorfull.less"
+  },
+  {
+    "outputFile": "Content/colorfull.css",
+    "inputFile": "Content/colorfull.scss"
+  }
+]

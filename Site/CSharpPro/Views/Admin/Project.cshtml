@@ -1,0 +1,117 @@
+﻿@model CSharpPro.ViewModels.ProjectViewModel
+@{
+    Layout = "_LayoutAdmin.cshtml";
+}
+
+@using (Html.BeginForm("Project", "Admin", FormMethod.Post, new { @class = "projetc-form", enctype="multipart/form-data" }))
+{
+    @Html.HiddenFor(x => x.Id)
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label for="@Html.IdFor(x=>x.Image)" class="bold">Project Image:</label>
+                @if(Model != null && !string.IsNullOrEmpty(Model.ImageUrl)){
+                    <div class="thumbnail">
+                        @Html.HiddenFor(x=>x.ImageUrl)
+                        <img src="@Model.ImageUrl" alt="project image"/>
+                    </div>
+                }
+                <br/>
+                @Html.TextBoxFor(x=>x.Image, new { type="file", @class="form-control" })
+            </div>
+        </div>
+        <div class="col-sm-8">
+            <div class="form-group">
+                <label for="@Html.IdFor(x=>x.Title)" class="bold">Project Title:</label>
+                @Html.TextBoxFor(x => x.Title, new { @class = "form-control", placeholder = "title" })
+            </div>
+            <div class="form-group">
+                <label for="@Html.IdFor(x=>x.Link)" class="bold">Live preview:</label>
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon3">http://</span>
+                    @Html.TextBoxFor(x => x.Link, new { @class = "form-control", placeholder = "project url" })
+                </div>
+            </div>
+            <div class="clearfix form-group skills">
+                <label for="@Html.IdFor(x=>x.Skills)" class="bold">Skills:</label>
+                @Html.TextBoxFor(x => x.Skills, new { @class = "skills-field", multiple = true })
+            </div>
+            <div class="types form-group">
+                <label class="bold">Types:</label>
+                @foreach (var type in Model.TypeList)
+                {
+                    var @checked = Model.SelectedTypeList != null && Model.SelectedTypeList.Any(x => x == type.Id);
+
+                    <div class="checkbox">
+                        <label>
+                            <input @(@checked ? "checked" : "")
+                             type="checkbox" name="SelectedTypeList" value="@type.Id" id="type-@type.Id" /> @type.Title
+                        </label>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+    if (Model.ClientList != null && Model.ClientList.Any())
+    {
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="@Html.IdFor(x=>x.Description)" class="bold">Project Info:</label>
+                    @Html.TextAreaFor(x => x.Description, new { @class = "tinymce", rows = "15" })
+                </div>
+            </div>
+            <div class="col-sm-12 clients">
+                <h1 class="title text-center">Clients:</h1>
+
+                @foreach (var client in Model.ClientList)
+                {
+                    var src = string.IsNullOrEmpty(client.ImageUrl) 
+                        ? "~/Content/images/portfolio/1.jpg"
+                        : client.ImageUrl;
+
+                    var @checked = Model.SelectedClientList != null && Model.SelectedClientList.Any(x => x == client.Id);
+
+                    <label class="client thumbnail">
+                        <span class="client-thumb">
+                            <input @(@checked ? "checked" : "") 
+                                type="checkbox" class="checkbox" name="SelectedClientList" value="@client.Id" />
+                            <img src="@src" alt="photo">
+                        </span>
+                        <strong>@client.Name</strong>
+                    </label>   
+                }
+            </div>
+        </div>
+	}
+
+    <div class="row">
+        <div class="col-sm-12">
+            <hr />
+            @Html.ActionLink("Cancel", "Projects", "Admin", new { @class = "btn btn-default pull-left" })
+            <button class="btn btn-success pull-right" type="submit">Save</button>
+        </div>
+    </div>
+}
+
+@section scripts{
+    <script>
+        $(function () {
+        @if(string.IsNullOrEmpty(Model.InitialSkills)){
+            <text>var initialValue = null;</text>
+        }
+        else{
+            <text>var initialValue = @Html.Raw(Model.InitialSkills);</text>
+        }
+            
+            $('.skills-field').fastselect({
+                valueDelimiter: ";",
+                loadOnce: false,
+                userOptionAllowed: true,
+                url: '@Url.Action("Skills", "Admin")',
+                initialValue: initialValue
+            });
+        })
+    </script>
+}

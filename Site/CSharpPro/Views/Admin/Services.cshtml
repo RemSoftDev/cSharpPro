@@ -1,0 +1,30 @@
+﻿@model List<CSharpPro.DataModels.Service>
+@{
+    Layout = "_LayoutAdmin.cshtml";
+}
+<div class="list service-list">
+    <h1 class="section-title">
+        Services
+        @Html.ActionLink(" ", "Service", "Admin", null, new { @class = "fa fa-plus add-new" })
+    </h1>
+    <table class="table table-striped table-hover">
+        <thead class="thead-inverse">
+            <tr>
+                <th>Title</th>
+                <th class="actions">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var Service in Model)
+            {
+                <tr id="Service-@Service.Id">
+                    <td>@Service.Title</td>
+                    <td class="actions">
+                        @Html.ActionLink(" ", "Service", "Admin", new { id = Service.Id }, new { @class = "fa fa-pencil-square-o edit text-success" })
+                        @Ajax.ActionLink(" ", "Service", "Admin", new { id = Service.Id }, new AjaxOptions { HttpMethod = "DELETE", InsertionMode = InsertionMode.Replace, UpdateTargetId = "Service-" + Service.Id, Confirm="Are you sure want to delete this Service?" }, new { @class = "fa fa-times text-danger" })
+                    </td>
+                </tr>
+           }
+        </tbody>
+    </table>
+</div>

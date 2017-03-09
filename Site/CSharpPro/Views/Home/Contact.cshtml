@@ -1,0 +1,68 @@
+﻿﻿@model CSharpPro.ViewModels.ContactViewModel
+@{
+    Layout = null;
+    var hasClients = Model.Clients != null && Model.Clients.Any();
+}
+<div class="row">
+    @if (hasClients)
+    {
+        <div class="col-md-4 col-sm-6">
+            <div class="contact-info bottom">
+                <h2>Testimonial</h2>
+            </div>
+            <div class="testimonial bottom">
+                @foreach (var client in Model.Clients)
+                {
+                    <div class="media row thumbnail-colorfull-wrapper">
+                        @if (!string.IsNullOrEmpty(client.ImageUrl))
+                        {
+                            <div class="col-lg-4 col-md-12 col-sm-8 col-sm-offset-2 col-md-offset-0">
+                                @if (!string.IsNullOrEmpty(client.Link))
+                                {
+                                    <a href="http://@client.Link" class="colorfull" target="_blank">
+                                        <img src="@client.ImageUrl" alt="@client.Name">
+                                    </a>
+}
+                                else
+                                {
+                                    <span class="colorfull">
+                                        <img src="@client.ImageUrl" alt="@client.Name">
+                                    </span>
+}
+                            </div>
+}
+                        <div class="media-text col-sm-12 col-md-12 @(!string.IsNullOrEmpty(client.ImageUrl)? "col-lg-8" : "col-lg-12")">
+                            <blockquote>@client.Testimonial</blockquote>
+                            <h3>
+                                @{    var link = string.Empty;
+                                    if (!string.IsNullOrEmpty(client.Link))
+                                    {
+                                        link = string.Format("href=http://{0} target=_blank", client.Link);
+                                    }
+                                }
+                                <a @link>- @client.Name</a>
+                            </h3>
+                        </div>
+                    </div>      }
+            </div>
+        </div>
+                                    }
+    <div class="col-md-3 col-sm-6">
+        <div class="contact-info bottom">
+            <h2>Contacts</h2>
+            <address>
+                E-mail: <a href="mailto:contactus@csharp.company">contactus@csharp.company</a> <br>
+                Phone:  <a href="tel:+380637567176">+38 063 756 7176</a><br>
+            </address>
+
+            <h2>Address</h2>
+            <address>Ukraine, Lviv</address>
+        </div>
+    </div>
+    <div class="col-md-5 col-sm-12 @(hasClients? "" : "col-md-offset-4")">
+        <div class="contact-form bottom">
+            <h2>Send a message</h2>
+            @Html.Partial("MailForm", new CSharpPro.ViewModels.EmailViewModel { })
+        </div>
+    </div>
+</div>

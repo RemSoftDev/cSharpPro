@@ -1,0 +1,77 @@
+﻿################################################################################
+# This .tfignore file was automatically created by Microsoft(R) Visual Studio.
+#
+# Local items matching filespecs in this file will not be added to version
+# control. This file can be checked in to share exclusions with others.
+#
+# Wildcard characters are * and ?. Patterns are matched recursively unless the
+# pattern is prefixed by the \ character.
+#
+# You can prepend a path to a pattern to make it more specific. If you do,
+# wildcard characters are not permitted in the path portion.
+#
+# The # character at the beginning of a line indicates a comment.
+#
+# The ! prefix negates a pattern. This can be used to re-include an item after
+# it was excluded by a .tfignore file higher in the tree, or by the Team
+# Project Collection's global exclusions list.
+#
+# The / character is interpreted as a \ character on Windows platforms.
+#
+# Examples:
+#
+#  # Excludes all files ending in .txt in Alpha\Beta and all its subfolders.
+#  Alpha\Beta\*.txt
+#
+#  # Excludes all files ending in .cpp in this folder only.
+#  \*.cpp
+#
+#  # Excludes all files ending in .cpp in this folder and all subfolders.
+#  *.cpp
+#
+#  # If "Contoso" is a folder, then Contoso and all its children are excluded.
+#  # If it is a file, then only the "Contoso" in this folder is excluded.
+#  \Contoso
+#
+#  # If Help.exe is excluded by a higher .tfignore file or by the Team Project
+#  # Collection global exclusions list, then this pattern re-includes it in
+#  # this folder only.
+#  !\Help.exe    
+#
+################################################################################
+
+\Site\CSharpPro\Content\Images\Uploaded\1179e989-2ff1-4b41-a8f7-f4223d95b4da\art.jpg
+\Site\CSharpPro\Content\Images\Uploaded\1d06ff1f-1ff5-418c-99b1-140a542687ee\407cb9aa7e0c0087ec204f85b3d02cbd.jpg
+\Site\CSharpPro\Content\Images\Uploaded\1f74ee11-0658-4963-a24a-8814a5fa2793\download.png
+\Site\CSharpPro\Content\Images\Uploaded\2afb0312-2673-41ee-bf9c-7256c73ca169\GgGqsbydHsU.jpg
+\Site\CSharpPro\Content\Images\Uploaded\32dbab73-9cfe-4ed3-86cc-4c01a7044cf0\bg`1.jpg
+\Site\CSharpPro\Content\Images\Uploaded\36031638-c001-4d3f-8a7a-a6aeafdd4bb4\10369317_824473441005098_2099599793_n.jpg
+\Site\CSharpPro\Content\Images\Uploaded\3c8c9e69-8f17-468b-8cf4-5de984232a4f\407cb9aa7e0c0087ec204f85b3d02cbd.jpg
+\Site\CSharpPro\Content\Images\Uploaded\430346b7-b0cf-42c1-a120-96fab11b2431\407cb9aa7e0c0087ec204f85b3d02cbd.jpg
+\Site\CSharpPro\Content\Images\Uploaded\48c79d0c-f7b2-40ed-b8c4-2b1f2fc9c7be\95c75074ab1c08b6a95f840951b4449a.jpg
+\Site\CSharpPro\Content\Images\Uploaded\49aeb454-474c-4f9c-8929-f7b568403d94\bg.jpg
+\Site\CSharpPro\Content\Images\Uploaded\49d2d762-2235-4ccc-a93f-35284a254cc1\photo.jpg
+\Site\CSharpPro\Content\Images\Uploaded\4d2cbab0-46a3-47c4-b348-ce0d73141e98\photo.jpg
+\Site\CSharpPro\Content\Images\Uploaded\536946f8-7063-4ec8-b9d7-b3055f111b0c\photo.jpg
+\Site\CSharpPro\Content\Images\Uploaded\5c1d409e-9e1d-4656-a564-9c667d9a7bcb\download.png
+\Site\CSharpPro\Content\Images\Uploaded\5d95f609-b4d2-4e7b-ac5b-048bc53b4016\photo.jpg
+\Site\CSharpPro\Content\Images\Uploaded\60dd8545-49a7-4b67-9634-7ec6b13e271c\Sc1_ASaX0Hk.jpg
+\Site\CSharpPro\Content\Images\Uploaded\7690a5b4-ac6d-4385-bd6b-59c2a69786f7\407cb9aa7e0c0087ec204f85b3d02cbd.jpg
+\Site\CSharpPro\Content\Images\Uploaded\7729ad15-3216-43ff-b12c-ed5dede3955d\the_tip_of_the_iceberg_by_lucas_and_dreams-d3bsqt3.png
+\Site\CSharpPro\Content\Images\Uploaded\85e046e8-dcdd-4f26-870b-877db28e4a73\20_by_elenashved-d6mrkla.jpg
+\Site\CSharpPro\Content\Images\Uploaded\86b531d0-e933-493e-a34d-e3daead5cef9\30_by_elenashved-d9h69yv.jpg
+\Site\CSharpPro\Content\Images\Uploaded\9571ade6-c381-4774-9cf5-a2d8dce3369c\20_by_elenashved-d6mrkla.jpg
+\Site\CSharpPro\Content\Images\Uploaded\962dff20-c7bd-4e88-9ff7-40a4d7ef79e2\95c75074ab1c08b6a95f840951b4449a.jpg
+\Site\CSharpPro\Content\Images\Uploaded\9ca53880-507f-4b0f-8e60-8e69eb674cb2\1446b871875e441237ace46219434fa4.jpg
+\Site\CSharpPro\Content\Images\Uploaded\9f5579ff-c675-4752-93d2-1e2624aae39c\the_tip_of_the_iceberg_by_lucas_and_dreams-d3bsqt3.png
+\Site\CSharpPro\Content\Images\Uploaded\a6c690a4-59d2-4699-9238-085525174c9f\GgGqsbydHsU.jpg
+\Site\CSharpPro\Content\Images\Uploaded\acaccc4c-6840-413b-a5f7-93791e806737\53875583.jpg
+\Site\CSharpPro\Content\Images\Uploaded\aeb8eb7d-6146-44e9-8d15-90834a110042\art.jpg
+\Site\CSharpPro\Content\Images\Uploaded\b2a18bea-f5f6-477e-bdcb-a46f3f402f0a\Sc1_ASaX0Hk.jpg
+\Site\CSharpPro\Content\Images\Uploaded\b3544274-5f0d-4405-bc13-a162f4e2a284\1.jpg
+\Site\CSharpPro\Content\Images\Uploaded\cda3f531-032c-4e2e-83d8-a0c85aa6c0c7\128.jpg
+\Site\CSharpPro\Content\Images\Uploaded\dba894bc-7d49-4e32-97f1-3d41e76b2c75\Peter-Williams.-Animalizm-v-akvareli.-Elusive-Nature.-Bumagaakvarel-tsvetnyie-karandashi.-22x15-dyuymov.jpg
+\Site\CSharpPro\Content\Images\Uploaded\e8f887cf-d345-4692-8cfa-0a685fc3c5fb\20_by_elenashved-d6mrkla.jpg
+\Site\CSharpPro\Content\Images\Uploaded\f18cf9b3-95a4-42b8-b6ab-b1feff046f4c\Peter-Williams.-Animalizm-v-akvareli.-High-and-Mighty.-Bumagaakvarel.-22x16-dyuymov.jpg
+\Site\CSharpPro\Content\Images\Uploaded\f984758c-a525-485a-b03b-bfdd417eeea0\download.png
+\Site\CSharpPro\Content\Images\Uploaded\ffa7427e-b46c-4769-8853-3c1185d8942e\download.png

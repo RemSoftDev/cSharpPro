@@ -1,0 +1,122 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    overflow: auto;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    z-index: 10;
+}
+.d-inline-block{
+    display: inline-block !important;
+}
+
+header .navbar.navbar-inverse {
+    margin-top: 0px;
+}
+
+header .navbar .navbar-brand {
+    padding: 5px 35px 5px 15px;
+    height: 50px;
+}
+
+header .navbar .navbar-brand img {
+    max-height: 100%;
+}
+
+footer {
+    padding: 15px 0;
+    background-color: #222;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+}
+
+.page {
+    padding: 20px 0;
+    overflow: auto;
+    height: 100%;
+}
+
+.section-title {
+    position: relative;
+    padding-right: 50px;
+}
+
+.section-title .add-new {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #222;
+    text-decoration: none;
+}
+
+.section-title .add-new:hover {
+    opacity: 0.7;
+}
+
+.projetc-form .related-projects {
+    margin-top: 60px;
+}
+
+.list .actions {
+    width: 130px;
+}
+
+.list .actions a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+.list .actions a.disabled {
+    opacity: .5;
+    cursor: default;
+}
+
+.clients .client{
+    width: 150px;
+    margin-right: 7px;
+    float: left;
+}
+.clients .client-thumb{
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: 150px;
+    display: inline-block;
+}
+.clients .client-thumb img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+.clients .client-thumb [name="SelectedClientList"]{
+    position: absolute;
+    top: 0;
+    right: 7px;
+    z-index: 10;
+}
+.skills .fstElement {
+    width: 100%;
+}
